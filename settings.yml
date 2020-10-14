@@ -1,0 +1,11 @@
+---
+hide_from_new_users:
+  type: bool
+  default: false
+  description:
+    en: "Hide the like button for all new (Trust Level 0) users"
+hide_from_anons:
+  type: bool
+  default: false
+  description:
+    en: "Hide the like button for all anonymous (logged out) users"
