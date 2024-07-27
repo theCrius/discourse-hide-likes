@@ -12,6 +12,7 @@ export default apiInitializer("0.8", (api) => {
                               this.currentUser &&
                               this.currentUser.silenced === true
 
+      console.log(settings.hide_from_silenced, this.currentUser, this.currentUser.silenced === true)
       console.log(hideForNewUser, hideForAnon, hideForSilenced)
       let post_menu = [];
       if (hideForNewUser || hideForAnon || hideForSilenced) {
