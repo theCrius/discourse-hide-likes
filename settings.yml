@@ -4,7 +4,7 @@ hide_from_new_users:
   default: false
   description:
     en: "Hide the like button for all new (Trust Level 0) users"
-hide_from_silenced:
+hide_for_silenced:
   type: bool
   default: false
   description:
