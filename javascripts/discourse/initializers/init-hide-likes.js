@@ -12,13 +12,17 @@ export default apiInitializer("0.8", (api) => {
                               this.currentUser &&
                               this.currentUser.silenced === true
 
-      console.log(this.siteSettings.post_menu.split("|"))
+      console.log(hideForNewUser, hideForAnon, hideForSilenced)
+      let post_menu = [];
       if (hideForNewUser || hideForAnon || hideForSilenced) {
-        return this.siteSettings.post_menu
+        post_menu = this.siteSettings.post_menu
           .split("|")
           .filter((item) => item !== "like");
+      } else {
+        post_menu = this.siteSettings.post_menu.split("|").filter(Boolean);
       }
-      return this.siteSettings.post_menu.split("|").filter(Boolean);
+      console.log(post_menu);
+      return post_menu;
     },
   });
 });
