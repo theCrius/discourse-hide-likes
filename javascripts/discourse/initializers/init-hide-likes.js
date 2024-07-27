@@ -11,7 +11,8 @@ export default apiInitializer("0.8", (api) => {
       const hideForSilenced = settings.hide_from_silenced &&
                               this.currentUser &&
                               this.currentUser.silenced === true
-      
+
+      console.log(this.siteSettings.post_menu.split("|"))
       if (hideForNewUser || hideForAnon || hideForSilenced) {
         return this.siteSettings.post_menu
           .split("|")
