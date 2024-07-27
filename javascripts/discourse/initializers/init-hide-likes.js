@@ -2,6 +2,8 @@ import { apiInitializer } from "discourse/lib/api";
 export default apiInitializer("0.8", (api) => {
   api.reopenWidget("post-menu", {
     menuItems() {
+      if (this.currentUser) console.log(this.currentUser)
+        
       const hideForNewUser  = settings.hide_from_new_users &&
                               this.currentUser &&
                               this.currentUser.trust_level === 0;
